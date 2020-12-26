@@ -4,9 +4,6 @@
   #include "lufa.h"
   #include "split_util.h"
 #endif
-// #ifdef SSD1306OLED
-//   #include "ssd1306.h"
-// #endif
 
 #ifdef RGBLIGHT_ENABLE
 //Following line allows macro to read current RGB settings
@@ -77,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |----------+-------+-------+-------+-------+-------|     |-------+-------+-------+-------+-------+-------|
  * | CapsLock|   A   |   S   |   D   |   F   |   G   |        |   H   |   J   |   K   |   L   |   :   |   '   |
  * |------------+-------+-------+-------+-------+-------|    |-------+-------+-------+-------+-------+-------|
- * |   LShift  |   Z   |   X   |   C   |   V   |   B   |        |      |   ¥   |   ,   |   .   |   /   |RShift|
+ * |   LShift  |   Z   |   X   |   C   |   V   |   B   |        |      |   ¥   |   ,   |   .   |     |RShift|
  * `------------------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------'
  * |  LCTRL |          | LALT |      |LOWER |    Space   |   \  Enter   | RAISE |      | RALT |  RGUI  | RCTRL |
  * |       |          |      |      |      |            |     \        |       |      |      |        |       |
@@ -165,25 +162,17 @@ void update_tri_layer_RGB(uint8_t layer1, uint8_t layer2, uint8_t layer3) {
   }
 }
 
-void matrix_init_user(void) {
-    // #ifdef RGBLIGHT_ENABLE
-    //   RGB_current_mode = rgblight_config.mode;
-    // #endif
-}
-
 //SSD1306 OLED update loop, make sure to enable OLED_DRIVER_ENABLE=yes in rules.mk
 #ifdef OLED_DRIVER_ENABLE
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
   #ifdef MASTER_RIGHT
     if (is_keyboard_master())
         return rotation;
-        //return OLED_ROTATION_270;  // flips the display 180 degrees if offhand
       else
         return OLED_ROTATION_180;
   #else
       if (is_keyboard_master())
         return OLED_ROTATION_180;
-        //return OLED_ROTATION_270;  // flips the display 180 degrees if offhand
       else
         return rotation;
   #endif

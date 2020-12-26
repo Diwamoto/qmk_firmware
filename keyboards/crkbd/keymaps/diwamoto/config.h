@@ -38,9 +38,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifdef RGBLIGHT_ENABLE
     #undef RGBLED_NUM
     #define RGBLIGHT_ANIMATIONS
-    #define RGBLED_NUM 50
+    #define RGBLED_NUM 70
     #define RGBLIGHT_LIMIT_VAL 200
     #define RGBLIGHT_HUE_STEP 10
     #define RGBLIGHT_SAT_STEP 17
     #define RGBLIGHT_VAL_STEP 17
 #endif
+
+#define OLED_FONT_H "keyboards/crkbd/lib/glcdfont.c"

@@ -50,9 +50,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* ws2812 RGB LED */
 #define RGB_DI_PIN D3
-//#define RGBLED_NUM 57    // Number of LEDs
-//#define RGBLIGHT_SPLIT
-//#define RGBLED_SPLIT { 28, 29 }
+#define RGBLED_NUM 57    // Number of LEDs
+#define RGBLIGHT_SPLIT
+#define RGBLED_SPLIT { 28, 29 }
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
