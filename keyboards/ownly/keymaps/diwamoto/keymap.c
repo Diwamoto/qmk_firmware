@@ -171,6 +171,7 @@ void update_tri_layer_RGB(uint8_t layer1, uint8_t layer2, uint8_t layer3) {
 }
 
 void matrix_init_user(void) {
+    rgb_matrix_enable();
     #ifdef RGBLIGHT_ENABLE
       RGB_current_mode = rgblight_config.mode;
     #endif
@@ -287,6 +288,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         raise_pressed = false;
       }
       break;
+    // case RGBRST:
+    //   if (record->event.pressed) {
+    //     rgb_matrix_mode(0);
+    //
+    //   }
+    // break;
   }
   return true;
 }

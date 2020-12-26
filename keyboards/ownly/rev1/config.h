@@ -46,15 +46,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 //#define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
-//#define LOCKING_RESYNC_ENABLE
+///#define LOCKING_RESYNC_ENABLE
 
 /* ws2812 RGB LED */
 #define RGB_DI_PIN D3
-#define RGBLED_NUM 57    // Number of LEDs
-#define RGBLIGHT_SPLIT
-#define RGBLED_SPLIT { 28, 29 }
-#define DRIVER_LED_TOTAL 57
-#define RGB_MATRIX_KEYPRESSES
+//#define RGBLED_NUM 57    // Number of LEDs
+//#define RGBLIGHT_SPLIT
+//#define RGBLED_SPLIT { 28, 29 }
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
