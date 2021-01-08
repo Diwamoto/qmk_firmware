@@ -162,7 +162,7 @@ void update_tri_layer_RGB(uint8_t layer1, uint8_t layer2, uint8_t layer3) {
   }
 }
 
-void matrix_init_user(void) {
+void keyboard_post_init_user(void) {
   //enable rainbow led animation
   rgblight_step();
 }
