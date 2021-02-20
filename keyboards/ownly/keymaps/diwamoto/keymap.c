@@ -30,6 +30,8 @@ extern uint8_t is_master;
 #define KC_LSAD  RGB_SAD
 #define KC_LVAI  RGB_VAI
 #define KC_LVAD  RGB_VAD
+#define KC_LSPI  RGB_SPI
+#define KC_LSPD  RGB_SPD
 #define KC_LMOD  RGB_MOD
 
 enum custom_keycodes {
@@ -67,7 +69,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT,   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                        KC_N,    KC_M,  KC_COMM,  KC_DOT, KC_SLSH,   KC_RO,\
   //|--------+--------+--------+--------+--------+----------------|     |------------+------+-------------+--------+--------+--------|
-      KC_LCTRL,        KC_LCTL,              LOWER,         KC_SPC,       KC_ENT,       RAISE,              KC_RALT, KC_RGUI, KC_RCTL\
+      KC_LCTRL,        KC_LALT,              LOWER,         KC_SPC,       KC_ENT,       RAISE,              KC_RALT, KC_RGUI, KC_RCTL\
   ///-------------------------------------------------------------'     `--------------------'
     ),
 /* LOWER
@@ -146,7 +148,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXX,  XXXXXX,  XXXXXX,  XXXXXX,  XXXXXX, KC_LHUD,                       XXXXXX,  XXXXXX,  XXXXXX,  XXXXXX,  XXXXXX,  XXXXXX,\
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXX,  XXXXXX,  XXXXXX, KC_LHUD,  XXXXXX, KC_LMOD,                       XXXXXX,  XXXXXX, KC_LHUI,  XXXXXX,  XXXXXX,  XXXXXX,\
+      XXXXXX,  XXXXXX, KC_LSPD, KC_LHUD,  XXXXXX, KC_LMOD,                      RGB_RMOD,  XXXXXX, KC_LHUI, KC_LSPI,  XXXXXX,  XXXXXX,\
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXX,  XXXXXX,  XXXXXX, KC_CALC,  XXXXXX,  XXXXXX,                       XXXXXX,  XXXXXX,  XXXXXX,  XXXXXX, KC_LVAI,  XXXXXX,\
   //|--------+--------+--------+--------+--------+----------------|     |------------+------+-------------+--------+--------+--------|
